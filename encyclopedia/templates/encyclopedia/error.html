@@ -1,0 +1,17 @@
+{% extends 'encyclopedia/layout.html' %}
+{% load static %}
+
+{% block style %}
+    <link href="{% static 'encyclopedia/error.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block body %}
+    <h1>{{ error_text }}</h1>
+    <h1>{{ error_code }}</h1>
+    <h3>{{ error_message }}</h3>
+
+{% endblock %}

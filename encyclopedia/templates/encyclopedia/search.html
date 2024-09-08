@@ -1,0 +1,21 @@
+{% extends 'encyclopedia/layout.html' %}
+{% load static %}
+
+{% block style %}
+    <link href="{% static 'encyclopedia/search.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block body %}
+    <h1>Search Results for: <span id="q">{{ query }}</span></h1>
+    <ul>
+        {% for q in query_result %}
+            <li><a href="{% url 'entry' q %}">{{ q }}</a></li>
+            {% empty %}
+                <li>No Matching Result for: {{ query }}
+        {% endfor %}
+    </ul>
+{% endblock %}

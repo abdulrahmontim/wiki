@@ -1,0 +1,12 @@
+content {
+    font-size: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
